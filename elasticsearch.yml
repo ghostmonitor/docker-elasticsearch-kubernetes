@@ -12,6 +12,7 @@ path:
   logs: /data/log
   plugins: /elasticsearch/plugins
   work: /data/work
+  repo: /data/backup
 
 bootstrap.mlockall: true
 
