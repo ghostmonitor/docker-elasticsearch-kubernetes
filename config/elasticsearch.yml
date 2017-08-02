@@ -28,3 +28,7 @@ discovery:
   zen:
     ping.unicast.hosts: ${DISCOVERY_SERVICE}
     minimum_master_nodes: ${NUMBER_OF_MASTERS}
+
+xpack.monitoring.enabled: true
+xpack.ml.enabled: true
+xpack.watcher.enabled: true
