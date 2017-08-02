@@ -1,9 +1,23 @@
-FROM quay.io/ghostmonitor/docker-elasticsearch:5.5.1
+FROM docker.elastic.co/elasticsearch/elasticsearch:5.5.1
 
-MAINTAINER pjpires@gmail.com
+MAINTAINER david@ghostmonitor.com <David Papp>
 
 # Override config, otherwise plug-in install will fail
 ADD config /elasticsearch/config
 
 # Set environment
 ENV DISCOVERY_SERVICE elasticsearch-discovery
+ENV ES_JAVA_OPTS "-Xms512m -Xmx512m"
+ENV CLUSTER_NAME elasticsearch-default
+ENV NODE_MASTER true
+ENV NODE_DATA true
+ENV NODE_INGEST true
+ENV HTTP_ENABLE true
+ENV NETWORK_HOST _site_
+ENV HTTP_CORS_ENABLE true
+ENV HTTP_CORS_ALLOW_ORIGIN *
+ENV NUMBER_OF_MASTERS 1
+ENV MAX_LOCAL_STORAGE_NODES 1
+ENV SHARD_ALLOCATION_AWARENESS ""
+ENV SHARD_ALLOCATION_AWARENESS_ATTR ""
+
