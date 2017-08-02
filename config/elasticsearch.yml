@@ -17,10 +17,6 @@ path:
 bootstrap:
   memory_lock: true
 
-bootstrap.mlockall: true
-script.inline: true
-script.indexed: true
-
 http:
   enabled: ${HTTP_ENABLE}
   compression: true
