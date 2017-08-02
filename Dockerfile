@@ -3,7 +3,7 @@ FROM docker.elastic.co/elasticsearch/elasticsearch:5.5.1
 MAINTAINER david@ghostmonitor.com <David Papp>
 
 # Override config, otherwise plug-in install will fail
-ADD config /elasticsearch/config
+ADD config config/
 
 # Set environment
 ENV DISCOVERY_SERVICE elasticsearch-discovery
@@ -20,4 +20,7 @@ ENV NUMBER_OF_MASTERS 1
 ENV MAX_LOCAL_STORAGE_NODES 1
 ENV SHARD_ALLOCATION_AWARENESS ""
 ENV SHARD_ALLOCATION_AWARENESS_ATTR ""
-
+ENV XPACK_ML_ENABLED true
+ENV XPACK_MONITORING_ENABLED true
+ENV XPACK_SECURITY_ENABLED true
+ENV XPACK_WATCH_ENABLED true
