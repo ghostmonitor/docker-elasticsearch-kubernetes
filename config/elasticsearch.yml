@@ -11,8 +11,8 @@ node:
 network.host: ${NETWORK_HOST}
 
 path:
-  data: /data/data
-  logs: /data/log
+  data: /data/elasticsearch-${CLUSTER_NAME}/data
+  logs: /data/elasticsearch-${CLUSTER_NAME}/log
 
 bootstrap:
   memory_lock: false
