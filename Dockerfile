@@ -24,3 +24,6 @@ ENV XPACK_ML_ENABLED true
 ENV XPACK_MONITORING_ENABLED true
 ENV XPACK_SECURITY_ENABLED true
 ENV XPACK_WATCH_ENABLED true
+ENV NODE_NAME _test_
+
+RUN bin/elasticsearch-plugin install repository-s3
